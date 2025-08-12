@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Monac | Improve Skills</title>
-    
+
     <link rel="stylesheet" href="css/task3style.css" />
 </head>
 
@@ -19,6 +19,22 @@
             </nav>
             <div class="logo"> MÖNAC</div>
             <div class="auth-buttons">
+                <button id="theme-toggle" class="theme-toggle">
+                    <!-- Light mode icon (custom sun SVG) -->
+                    <svg id="icon-light" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                        fill="none">
+                        <path
+                            d="M12 3V4M12 20V21M4 12H3M6.31412 6.31412L5.5 5.5M17.6859 6.31412L18.5 5.5M6.31412 17.69L5.5 18.5001M17.6859 17.69L18.5 18.5001M21 12H20M16 12C16 14.2091 14.2091 16 12 16C9.79086 16 8 14.2091 8 12C8 9.79086 9.79086 8 12 8C14.2091 8 16 9.79086 16 12Z"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+
+                    <!-- Dark mode icon (moon) -->
+                    <svg id="icon-dark" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                        viewBox="0 0 24 24" style="display: none;">
+                        <path d="M21 12.79A9 9 0 0111.21 3 7 7 0 1012 21a9 9 0 009-8.21z" />
+                    </svg>
+                </button>
+
                 <a href="#" class="login">Log In</a>
                 <a href="#" class="signup">Sign Up</a>
             </div>
@@ -302,6 +318,27 @@
             <div class="privacy-policy">Terms & Privacy Policy</div>
         </div>
     </footer>
+
+    <!-- ======= THEME UI (added) ======= -->
+    <!-- Dark/Light Mode Toggle -->
+
+    <!-- Color Picker Panel -->
+    <div id="color-panel" class="color-panel" aria-hidden="true">
+        <h4>Primary color</h4>
+        <input type="color" id="primary-color-picker" value="#f9c265" />
+        <div class="color-presets" aria-hidden="false">
+            <button class="swatch" data-color="#f9c265" style="background:#f9c265" title="Default"></button>
+            <button class="swatch" data-color="#580000" style="background:#580000" title="Maroon"></button>
+            <button class="swatch" data-color="#60a5fa" style="background:#60a5fa" title="Blue"></button>
+            <button class="swatch" data-color="#1dae10" style="background:#1dae10" title="Green"></button>
+             <button class="swatch" data-color="#6c0abd" style="background:#6c0abd" title="Purple"></button>
+        </div>
+    </div>
+
+    <!-- Button to open/close color panel -->
+    <button id="color-panel-btn" class="color-panel-btn" title="Change primary color"><span class="panel-text">COLOR PANEL</span></button>
+
+    <script src="js/script.js"></script>
 </body>
 
 </html>
