@@ -1,6 +1,4 @@
-/* -------------------------
-   THEME VARIABLES (editable)
-   ------------------------- */
+
 :root{
   --primary-color: #f9c265;   /* main site accent (picker controls this) */
   --accent-color: #fbbf24;    /* secondary accent (set to primary by JS) */
@@ -96,6 +94,9 @@ header.header1 {
     font-weight: 800;
     margin-bottom: 16px;
 }
+.hero-image1{
+  
+}
 
 .highlight1 {
     background-color: var(--text-color);
@@ -107,7 +108,7 @@ header.header1 {
 .desc {
     margin-bottom: 24px;
     font-size: 16px;
-    color: var(--muted-2);
+    color: #000;
     max-width: 400px;
 }
 
@@ -468,9 +469,7 @@ header.header1 {
   line-height: 1.4;
 }
 
-.highlight3 {
-  color: #000;
-}
+
 
 .mobile-app {
   background-color: var(--mobile-app-bg);
@@ -561,13 +560,15 @@ body.dark-mode {
 body.dark-mode p,
 body.dark-mode h1,
 body.dark-mode h2,
-body.dark-mode h3,
 body.dark-mode h4,
 body.dark-mode h5,
 body.dark-mode h6,
 body.dark-mode li {
   color: white;
   
+}
+body.dark-mode .enroll-button{
+  border: 2px solid #000;
 }
 body.dark-mode .stats-container {
   background-color: #000;
@@ -632,7 +633,7 @@ theme-toggle svg {
   background: var(--bg-color);
   color: var(--text-color);
   box-shadow: -8px 10px 30px rgba(0,0,0,0.12);
-  transition: right 0.28s cubic-bezier(.2,.9,.2,1), background 0.2s ease, color 0.2s ease;
+  transition: right 0.28s , background 0.2s ease, color 0.2s ease;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -680,8 +681,148 @@ theme-toggle svg {
 .color-panel-btn.active { transform: translateX(-200px) }
 
 /* small responsive tweaks so the controls don't block content on mobile */
-@media (max-width: 640px) {
-  .theme-toggle { right: 16px; top: 12px; padding: 8px; }
-  .color-panel-btn { right: 56px; top: 12px; }
-  .color-panel { width: 200px; top: 56px; right: -220px; }
+/* -------------------------
+   RESPONSIVE DESIGN
+   ------------------------- */
+
+/* Tablets (≤ 1024px) */
+@media (max-width: 1524px) {
+  .navbar {
+    gap: 50px;
+    padding: 16px 24px;
+  }
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 32px 20px;
+  }
+
+  .hero-text1 {
+    max-width: 100%;
+  }
+
+  .hero-image1 img {
+    max-width: 80%;
+  }
+
+  .features-header {
+    width: 100%;
+    text-align: center;
+  }
+
+  .features-grid {
+    justify-content: center;
+  }
+
+  .feature-box {
+    width: 45%;
+  }
+
+  .promo-box {
+    flex-direction: column;
+    text-align: center;
+    width: 90%;
+  }
+
+  .promo-text {
+    width: 100%;
+  }
+
+  .start-container {
+    justify-content: center;
+   
+  }
 }
+
+/* Mobile (≤ 640px) */
+@media (max-width: 840px) {
+  /* Navbar */
+  .navbar {
+    flex-direction: column;
+    gap: 12px;
+    padding: 10px;
+    height: auto;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .auth-buttons {
+    justify-content: center;
+  }
+
+
+
+  .desc {
+    font-size: 14px;
+  }
+  .hero-image1 img {
+    max-width: 80%;
+  }
+  .hero-section{
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+
+  /* Stats */
+  .stats-container {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .separator {
+    display: none;
+  }
+
+  /* Features */
+  .features-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .feature-box {
+    width: 90%;
+  }
+
+  /* Courses */
+  .courses-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .course-card {
+    width: 100%;
+    max-width: 340px;
+  }
+
+  /* Promo */
+  .promo-box {
+    padding: 24px;
+    gap: 20px;
+  }
+
+  .promo-image img {
+    max-width: 80%;
+  }
+
+  /* Footer */
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+}
+

@@ -45,8 +45,8 @@ document.addEventListener("DOMContentLoaded", () => {
   });
   
   // Panel open/close
-  panelBtn.addEventListener("click", (ev) => {
-    ev.stopPropagation();
+  panelBtn.addEventListener("click", ()=>{
+
     panel.classList.toggle("open");
     panelBtn.classList.toggle("active");
   });
