@@ -94,10 +94,6 @@ header.header1 {
     font-weight: 800;
     margin-bottom: 16px;
 }
-.hero-image1{
-  
-}
-
 .highlight1 {
     background-color: var(--text-color);
     color: var(--bg-color);
